@@ -1,0 +1,131 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/b4c3d2dc-81a6-488e-9520-93a08089f09b
+// command took 1s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/b4c3d2dc-81a6-488e-9520-93a08089f09b
+// command took 1.99s and exited with 0
+// ***** Done, took 00:00:03 (3.07 sec)   *****
+// Found 3 benchmarks:
+//   Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+// **************************
+// Benchmark: Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b4c3d2dc-81a6-488e-9520-93a08089f09b.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLines" --job "ShortRun" --benchmarkId 0 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/b4c3d2dc-81a6-488e-9520-93a08089f09b/bin/Release/netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 277066.00 ns, 277.0660 us/op
+WorkloadJitting  1: 1 op, 668433.00 ns, 668.4330 us/op
+
+OverheadJitting  2: 16 op, 801760.00 ns, 50.1100 us/op
+WorkloadJitting  2: 16 op, 937658.00 ns, 58.6036 us/op
+
+WorkloadPilot    1: 16 op, 452576.00 ns, 28.2860 us/op
+WorkloadPilot    2: 32 op, 599043.00 ns, 18.7201 us/op
+WorkloadPilot    3: 64 op, 1157511.00 ns, 18.0861 us/op
+WorkloadPilot    4: 128 op, 1968678.00 ns, 15.3803 us/op
+WorkloadPilot    5: 256 op, 3796914.00 ns, 14.8317 us/op
+WorkloadPilot    6: 512 op, 7665883.00 ns, 14.9724 us/op
+WorkloadPilot    7: 1024 op, 14882349.00 ns, 14.5335 us/op
+WorkloadPilot    8: 2048 op, 29221312.00 ns, 14.2682 us/op
+WorkloadPilot    9: 4096 op, 57543652.00 ns, 14.0487 us/op
+WorkloadPilot   10: 8192 op, 121962568.00 ns, 14.8880 us/op
+WorkloadPilot   11: 16384 op, 243966799.00 ns, 14.8906 us/op
+WorkloadPilot   12: 32768 op, 456611262.00 ns, 13.9347 us/op
+WorkloadPilot   13: 65536 op, 859366980.00 ns, 13.1129 us/op
+
+OverheadWarmup   1: 65536 op, 352831.00 ns, 5.3838 ns/op
+OverheadWarmup   2: 65536 op, 340277.00 ns, 5.1922 ns/op
+OverheadWarmup   3: 65536 op, 330986.00 ns, 5.0504 ns/op
+OverheadWarmup   4: 65536 op, 333521.00 ns, 5.0891 ns/op
+OverheadWarmup   5: 65536 op, 338245.00 ns, 5.1612 ns/op
+OverheadWarmup   6: 65536 op, 342999.00 ns, 5.2337 ns/op
+OverheadWarmup   7: 65536 op, 439667.00 ns, 6.7088 ns/op
+OverheadWarmup   8: 65536 op, 411894.00 ns, 6.2850 ns/op
+OverheadWarmup   9: 65536 op, 407873.00 ns, 6.2236 ns/op
+OverheadWarmup  10: 65536 op, 370536.00 ns, 5.6539 ns/op
+
+OverheadActual   1: 65536 op, 314059.00 ns, 4.7922 ns/op
+OverheadActual   2: 65536 op, 348818.00 ns, 5.3225 ns/op
+OverheadActual   3: 65536 op, 295582.00 ns, 4.5102 ns/op
+OverheadActual   4: 65536 op, 351909.00 ns, 5.3697 ns/op
+OverheadActual   5: 65536 op, 305345.00 ns, 4.6592 ns/op
+OverheadActual   6: 65536 op, 315341.00 ns, 4.8117 ns/op
+OverheadActual   7: 65536 op, 324912.00 ns, 4.9578 ns/op
+OverheadActual   8: 65536 op, 304629.00 ns, 4.6483 ns/op
+OverheadActual   9: 65536 op, 295392.00 ns, 4.5073 ns/op
+OverheadActual  10: 65536 op, 304599.00 ns, 4.6478 ns/op
+OverheadActual  11: 65536 op, 349218.00 ns, 5.3286 ns/op
+OverheadActual  12: 65536 op, 388665.00 ns, 5.9306 ns/op
+OverheadActual  13: 65536 op, 364843.00 ns, 5.5671 ns/op
+OverheadActual  14: 65536 op, 361105.00 ns, 5.5100 ns/op
+OverheadActual  15: 65536 op, 336197.00 ns, 5.1300 ns/op
+OverheadActual  16: 65536 op, 360267.00 ns, 5.4972 ns/op
+OverheadActual  17: 65536 op, 314468.00 ns, 4.7984 ns/op
+OverheadActual  18: 65536 op, 278683.00 ns, 4.2524 ns/op
+OverheadActual  19: 65536 op, 278580.00 ns, 4.2508 ns/op
+OverheadActual  20: 65536 op, 278576.00 ns, 4.2507 ns/op
+
+WorkloadWarmup   1: 65536 op, 867486417.00 ns, 13.2368 us/op
+WorkloadWarmup   2: 65536 op, 857309757.00 ns, 13.0815 us/op
+WorkloadWarmup   3: 65536 op, 859332820.00 ns, 13.1124 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 65536 op, 852759650.00 ns, 13.0121 us/op
+WorkloadActual   2: 65536 op, 859661144.00 ns, 13.1174 us/op
+WorkloadActual   3: 65536 op, 869315128.00 ns, 13.2647 us/op
+
+// AfterActualRun
+WorkloadResult   1: 65536 op, 852444745.50 ns, 13.0073 us/op
+WorkloadResult   2: 65536 op, 859346239.50 ns, 13.1126 us/op
+WorkloadResult   3: 65536 op, 869000223.50 ns, 13.2599 us/op
+GC:  310 0 0 973605408 65536
+Threading:  2 0 65536
+
+// AfterAll
+// Benchmark Process 7254 has exited with code 0
+
+Mean = 13.1266 us, StdErr = 0.0733 us (0.56%); N = 3, StdDev = 0.1269 us
+Min = 13.0073 us, Q1 = 13.0073 us, Median = 13.1126 us, Q3 = 13.2599 us, Max = 13.2599 us
+IQR = 0.2526 us, LowerFence = 12.6283 us, UpperFence = 13.6388 us
+ConfidenceInterval = [10.8117 us; 15.4415 us] (CI 99.9%), Margin = 2.3149 us (17.64% of Mean)
+Skewness = 0.11, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "b4c3d2dc-81a6-488e-9520-93a08089f09b.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLinesAsync" --job "ShortRun" --benchmarkId 1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/b4c3d2dc-81a6-488e-9520-93a08089f09b/bin/Release/netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 278694.00 ns, 278.6940 us/op
+WorkloadJitting  1: 1 op, 6894226.00 ns, 6.8942 ms/op
+
+OverheadJitting  2: 16 op, 676122.00 ns, 42.2576 us/op
+WorkloadJitting  2: 16 op, 2322977.00 ns, 145.1861 us/op
+
+WorkloadPilot    1: 16 op, 1325192.00 ns, 82.8245 us/op
+WorkloadPilot    2: 32 op, 2774093.00 ns, 86.6904 us/op
+WorkloadPilot    3: 64 op, 5357655.00 ns, 83.7134 us/op
+WorkloadPilot    4: 128 op, 11656615.00 ns, 91.0673 us/op
+WorkloadPilot    5: 256 op, 21259744.00 ns, 83.0459 us/op
+WorkloadPilot    6: 512 op, 33413702.00 ns, 65.2611 us/op
+WorkloadPilot    7: 1024 op, 63411084.00 ns, 61.9249 us/op
+WorkloadPilot    8: 2048 op, 147357800.00 ns, 71.9521 us/op
+WorkloadPilot    9: 4096 op, 232764880.00 ns, 56.8274 us/op
+WorkloadPilot   10: 8192 op, 456190415.00 ns, 55.6873 us/op

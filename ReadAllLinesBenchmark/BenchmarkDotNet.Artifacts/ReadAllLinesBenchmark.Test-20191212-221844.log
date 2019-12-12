@@ -1,0 +1,351 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/a38b428a-c2be-4d17-b330-117fbc012a00
+// command took 1.02s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/a38b428a-c2be-4d17-b330-117fbc012a00
+// command took 2.08s and exited with 0
+// ***** Done, took 00:00:03 (3.19 sec)   *****
+// Found 3 benchmarks:
+//   Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+// **************************
+// Benchmark: Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "a38b428a-c2be-4d17-b330-117fbc012a00.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLines" --job "ShortRun" --benchmarkId 0 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/a38b428a-c2be-4d17-b330-117fbc012a00/bin/Release/netcoreapp3.0
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 305972.00 ns, 305.9720 us/op
+WorkloadJitting  1: 1 op, 645743.00 ns, 645.7430 us/op
+
+OverheadJitting  2: 16 op, 608574.00 ns, 38.0359 us/op
+WorkloadJitting  2: 16 op, 993856.00 ns, 62.1160 us/op
+
+WorkloadPilot    1: 16 op, 332921.00 ns, 20.8076 us/op
+WorkloadPilot    2: 32 op, 649332.00 ns, 20.2916 us/op
+WorkloadPilot    3: 64 op, 1157251.00 ns, 18.0820 us/op
+WorkloadPilot    4: 128 op, 3657463.00 ns, 28.5739 us/op
+WorkloadPilot    5: 256 op, 5161413.00 ns, 20.1618 us/op
+WorkloadPilot    6: 512 op, 24918606.00 ns, 48.6692 us/op
+WorkloadPilot    7: 1024 op, 15568104.00 ns, 15.2032 us/op
+WorkloadPilot    8: 2048 op, 29032671.00 ns, 14.1761 us/op
+WorkloadPilot    9: 4096 op, 73146078.00 ns, 17.8579 us/op
+WorkloadPilot   10: 8192 op, 132460067.00 ns, 16.1694 us/op
+WorkloadPilot   11: 16384 op, 217474638.00 ns, 13.2736 us/op
+WorkloadPilot   12: 32768 op, 440119966.00 ns, 13.4314 us/op
+WorkloadPilot   13: 65536 op, 844089629.00 ns, 12.8798 us/op
+
+OverheadWarmup   1: 65536 op, 327936.00 ns, 5.0039 ns/op
+OverheadWarmup   2: 65536 op, 336341.00 ns, 5.1322 ns/op
+OverheadWarmup   3: 65536 op, 314362.00 ns, 4.7968 ns/op
+OverheadWarmup   4: 65536 op, 358808.00 ns, 5.4750 ns/op
+OverheadWarmup   5: 65536 op, 335996.00 ns, 5.1269 ns/op
+
+OverheadActual   1: 65536 op, 324842.00 ns, 4.9567 ns/op
+OverheadActual   2: 65536 op, 368909.00 ns, 5.6291 ns/op
+OverheadActual   3: 65536 op, 336142.00 ns, 5.1291 ns/op
+OverheadActual   4: 65536 op, 339382.00 ns, 5.1786 ns/op
+OverheadActual   5: 65536 op, 263390.00 ns, 4.0190 ns/op
+OverheadActual   6: 65536 op, 303428.00 ns, 4.6299 ns/op
+OverheadActual   7: 65536 op, 286556.00 ns, 4.3725 ns/op
+OverheadActual   8: 65536 op, 524138.00 ns, 7.9977 ns/op
+OverheadActual   9: 65536 op, 330375.00 ns, 5.0411 ns/op
+OverheadActual  10: 65536 op, 338458.00 ns, 5.1645 ns/op
+OverheadActual  11: 65536 op, 324523.00 ns, 4.9518 ns/op
+OverheadActual  12: 65536 op, 311613.00 ns, 4.7548 ns/op
+OverheadActual  13: 65536 op, 324723.00 ns, 4.9549 ns/op
+OverheadActual  14: 65536 op, 350589.00 ns, 5.3496 ns/op
+OverheadActual  15: 65536 op, 345049.00 ns, 5.2650 ns/op
+OverheadActual  16: 65536 op, 324721.00 ns, 4.9548 ns/op
+OverheadActual  17: 65536 op, 325590.00 ns, 4.9681 ns/op
+OverheadActual  18: 65536 op, 348120.00 ns, 5.3119 ns/op
+OverheadActual  19: 65536 op, 324742.00 ns, 4.9552 ns/op
+OverheadActual  20: 65536 op, 324708.00 ns, 4.9547 ns/op
+
+WorkloadWarmup   1: 65536 op, 837703474.00 ns, 12.7823 us/op
+WorkloadWarmup   2: 65536 op, 845937320.00 ns, 12.9080 us/op
+WorkloadWarmup   3: 65536 op, 838574119.00 ns, 12.7956 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 65536 op, 840156718.00 ns, 12.8198 us/op
+WorkloadActual   2: 65536 op, 864493309.00 ns, 13.1911 us/op
+WorkloadActual   3: 65536 op, 869204065.00 ns, 13.2630 us/op
+
+// AfterActualRun
+WorkloadResult   1: 65536 op, 839831502.00 ns, 12.8148 us/op
+WorkloadResult   2: 65536 op, 864168093.00 ns, 13.1862 us/op
+WorkloadResult   3: 65536 op, 868878849.00 ns, 13.2580 us/op
+GC:  310 0 0 973605456 65536
+Threading:  2 0 65536
+
+// AfterAll
+// Benchmark Process 6995 has exited with code 0
+
+Mean = 13.0863 us, StdErr = 0.1373 us (1.05%); N = 3, StdDev = 0.2379 us
+Min = 12.8148 us, Q1 = 12.8148 us, Median = 13.1862 us, Q3 = 13.2580 us, Max = 13.2580 us
+IQR = 0.4432 us, LowerFence = 12.1500 us, UpperFence = 13.9229 us
+ConfidenceInterval = [8.7466 us; 17.4261 us] (CI 99.9%), Margin = 4.3398 us (33.16% of Mean)
+Skewness = -0.35, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "a38b428a-c2be-4d17-b330-117fbc012a00.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLinesAsync" --job "ShortRun" --benchmarkId 1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/a38b428a-c2be-4d17-b330-117fbc012a00/bin/Release/netcoreapp3.0
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 287389.00 ns, 287.3890 us/op
+WorkloadJitting  1: 1 op, 6667291.00 ns, 6.6673 ms/op
+
+OverheadJitting  2: 16 op, 701456.00 ns, 43.8410 us/op
+WorkloadJitting  2: 16 op, 2921699.00 ns, 182.6062 us/op
+
+WorkloadPilot    1: 16 op, 1970844.00 ns, 123.1777 us/op
+WorkloadPilot    2: 32 op, 2109931.00 ns, 65.9353 us/op
+WorkloadPilot    3: 64 op, 4352774.00 ns, 68.0121 us/op
+WorkloadPilot    4: 128 op, 9020939.00 ns, 70.4761 us/op
+WorkloadPilot    5: 256 op, 22973712.00 ns, 89.7411 us/op
+WorkloadPilot    6: 512 op, 35197480.00 ns, 68.7451 us/op
+WorkloadPilot    7: 1024 op, 65802033.00 ns, 64.2598 us/op
+WorkloadPilot    8: 2048 op, 133350261.00 ns, 65.1124 us/op
+WorkloadPilot    9: 4096 op, 261763666.00 ns, 63.9071 us/op
+WorkloadPilot   10: 8192 op, 450790673.00 ns, 55.0282 us/op
+WorkloadPilot   11: 16384 op, 892902116.00 ns, 54.4984 us/op
+
+OverheadWarmup   1: 16384 op, 93539.00 ns, 5.7092 ns/op
+OverheadWarmup   2: 16384 op, 89909.00 ns, 5.4876 ns/op
+OverheadWarmup   3: 16384 op, 116610.00 ns, 7.1173 ns/op
+OverheadWarmup   4: 16384 op, 89702.00 ns, 5.4750 ns/op
+OverheadWarmup   5: 16384 op, 89519.00 ns, 5.4638 ns/op
+OverheadWarmup   6: 16384 op, 89700.00 ns, 5.4749 ns/op
+OverheadWarmup   7: 16384 op, 108379.00 ns, 6.6149 ns/op
+OverheadWarmup   8: 16384 op, 87265.00 ns, 5.3262 ns/op
+
+OverheadActual   1: 16384 op, 87342.00 ns, 5.3309 ns/op
+OverheadActual   2: 16384 op, 87741.00 ns, 5.3553 ns/op
+OverheadActual   3: 16384 op, 87409.00 ns, 5.3350 ns/op
+OverheadActual   4: 16384 op, 87452.00 ns, 5.3376 ns/op
+OverheadActual   5: 16384 op, 87438.00 ns, 5.3368 ns/op
+OverheadActual   6: 16384 op, 86569.00 ns, 5.2838 ns/op
+OverheadActual   7: 16384 op, 87293.00 ns, 5.3279 ns/op
+OverheadActual   8: 16384 op, 86522.00 ns, 5.2809 ns/op
+OverheadActual   9: 16384 op, 89947.00 ns, 5.4899 ns/op
+OverheadActual  10: 16384 op, 87290.00 ns, 5.3278 ns/op
+OverheadActual  11: 16384 op, 86557.00 ns, 5.2830 ns/op
+OverheadActual  12: 16384 op, 87245.00 ns, 5.3250 ns/op
+OverheadActual  13: 16384 op, 87322.00 ns, 5.3297 ns/op
+OverheadActual  14: 16384 op, 91338.00 ns, 5.5748 ns/op
+OverheadActual  15: 16384 op, 86554.00 ns, 5.2828 ns/op
+
+WorkloadWarmup   1: 16384 op, 918704719.00 ns, 56.0733 us/op
+WorkloadWarmup   2: 16384 op, 899706020.00 ns, 54.9137 us/op
+WorkloadWarmup   3: 16384 op, 928242951.00 ns, 56.6555 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 891576971.00 ns, 54.4175 us/op
+WorkloadActual   2: 16384 op, 914728673.00 ns, 55.8306 us/op
+WorkloadActual   3: 16384 op, 935587210.00 ns, 57.1037 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 891489649.00 ns, 54.4122 us/op
+WorkloadResult   2: 16384 op, 914641351.00 ns, 55.8253 us/op
+WorkloadResult   3: 16384 op, 935499888.00 ns, 57.0984 us/op
+GC:  116 0 0 338689648 16384
+Threading:  49164 6 16384
+
+// AfterAll
+// Benchmark Process 7017 has exited with code 0
+
+Mean = 55.7786 us, StdErr = 0.7758 us (1.39%); N = 3, StdDev = 1.3437 us
+Min = 54.4122 us, Q1 = 54.4122 us, Median = 55.8253 us, Q3 = 57.0984 us, Max = 57.0984 us
+IQR = 2.6862 us, LowerFence = 50.3830 us, UpperFence = 61.1276 us
+ConfidenceInterval = [31.2647 us; 80.2926 us] (CI 99.9%), Margin = 24.5140 us (43.95% of Mean)
+Skewness = -0.03, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "a38b428a-c2be-4d17-b330-117fbc012a00.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLinesAsync2" --job "ShortRun" --benchmarkId 2 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/a38b428a-c2be-4d17-b330-117fbc012a00/bin/Release/netcoreapp3.0
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 392720.00 ns, 392.7200 us/op
+WorkloadJitting  1: 1 op, 6313317.00 ns, 6.3133 ms/op
+
+OverheadJitting  2: 16 op, 1016076.00 ns, 63.5048 us/op
+WorkloadJitting  2: 16 op, 3018487.00 ns, 188.6554 us/op
+
+WorkloadPilot    1: 16 op, 1715801.00 ns, 107.2376 us/op
+WorkloadPilot    2: 32 op, 2371895.00 ns, 74.1217 us/op
+WorkloadPilot    3: 64 op, 4683763.00 ns, 73.1838 us/op
+WorkloadPilot    4: 128 op, 9552287.00 ns, 74.6272 us/op
+WorkloadPilot    5: 256 op, 18484425.00 ns, 72.2048 us/op
+WorkloadPilot    6: 512 op, 30622566.00 ns, 59.8097 us/op
+WorkloadPilot    7: 1024 op, 66934538.00 ns, 65.3658 us/op
+WorkloadPilot    8: 2048 op, 111860700.00 ns, 54.6195 us/op
+WorkloadPilot    9: 4096 op, 254603085.00 ns, 62.1590 us/op
+WorkloadPilot   10: 8192 op, 452221570.00 ns, 55.2028 us/op
+WorkloadPilot   11: 16384 op, 733448941.00 ns, 44.7662 us/op
+
+OverheadWarmup   1: 16384 op, 93735.00 ns, 5.7211 ns/op
+OverheadWarmup   2: 16384 op, 90054.00 ns, 5.4965 ns/op
+OverheadWarmup   3: 16384 op, 89911.00 ns, 5.4877 ns/op
+OverheadWarmup   4: 16384 op, 89480.00 ns, 5.4614 ns/op
+OverheadWarmup   5: 16384 op, 90039.00 ns, 5.4955 ns/op
+OverheadWarmup   6: 16384 op, 89482.00 ns, 5.4615 ns/op
+OverheadWarmup   7: 16384 op, 89479.00 ns, 5.4614 ns/op
+OverheadWarmup   8: 16384 op, 89508.00 ns, 5.4631 ns/op
+OverheadWarmup   9: 16384 op, 97338.00 ns, 5.9410 ns/op
+OverheadWarmup  10: 16384 op, 89572.00 ns, 5.4670 ns/op
+
+OverheadActual   1: 16384 op, 90070.00 ns, 5.4974 ns/op
+OverheadActual   2: 16384 op, 95772.00 ns, 5.8455 ns/op
+OverheadActual   3: 16384 op, 90078.00 ns, 5.4979 ns/op
+OverheadActual   4: 16384 op, 78342.00 ns, 4.7816 ns/op
+OverheadActual   5: 16384 op, 78078.00 ns, 4.7655 ns/op
+OverheadActual   6: 16384 op, 77962.00 ns, 4.7584 ns/op
+OverheadActual   7: 16384 op, 77948.00 ns, 4.7576 ns/op
+OverheadActual   8: 16384 op, 77900.00 ns, 4.7546 ns/op
+OverheadActual   9: 16384 op, 78293.00 ns, 4.7786 ns/op
+OverheadActual  10: 16384 op, 69397.00 ns, 4.2357 ns/op
+OverheadActual  11: 16384 op, 69336.00 ns, 4.2319 ns/op
+OverheadActual  12: 16384 op, 69371.00 ns, 4.2341 ns/op
+OverheadActual  13: 16384 op, 80029.00 ns, 4.8846 ns/op
+OverheadActual  14: 16384 op, 69369.00 ns, 4.2339 ns/op
+OverheadActual  15: 16384 op, 69480.00 ns, 4.2407 ns/op
+OverheadActual  16: 16384 op, 69332.00 ns, 4.2317 ns/op
+OverheadActual  17: 16384 op, 69392.00 ns, 4.2354 ns/op
+OverheadActual  18: 16384 op, 134568.00 ns, 8.2134 ns/op
+OverheadActual  19: 16384 op, 69379.00 ns, 4.2346 ns/op
+OverheadActual  20: 16384 op, 69340.00 ns, 4.2322 ns/op
+
+WorkloadWarmup   1: 16384 op, 800939767.00 ns, 48.8855 us/op
+WorkloadWarmup   2: 16384 op, 740383264.00 ns, 45.1894 us/op
+WorkloadWarmup   3: 16384 op, 737028192.00 ns, 44.9846 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 738840506.00 ns, 45.0952 us/op
+WorkloadActual   2: 16384 op, 747107362.00 ns, 45.5998 us/op
+WorkloadActual   3: 16384 op, 759691919.00 ns, 46.3679 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 738762582.00 ns, 45.0905 us/op
+WorkloadResult   2: 16384 op, 747029438.00 ns, 45.5951 us/op
+WorkloadResult   3: 16384 op, 759613995.00 ns, 46.3632 us/op
+GC:  119 0 0 341349256 16384
+Threading:  49157 11 16384
+
+// AfterAll
+// Benchmark Process 7037 has exited with code 0
+
+Mean = 45.6829 us, StdErr = 0.3700 us (0.81%); N = 3, StdDev = 0.6409 us
+Min = 45.0905 us, Q1 = 45.0905 us, Median = 45.5951 us, Q3 = 46.3632 us, Max = 46.3632 us
+IQR = 1.2727 us, LowerFence = 43.1815 us, UpperFence = 48.2722 us
+ConfidenceInterval = [33.9911 us; 57.3747 us] (CI 99.9%), Margin = 11.6918 us (25.59% of Mean)
+Skewness = 0.13, Kurtosis = 0.67, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/ReadAllLinesBenchmark.Test-report-github.md
+
+// * Detailed results *
+Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 13.0863 us, StdErr = 0.1373 us (1.05%); N = 3, StdDev = 0.2379 us
+Min = 12.8148 us, Q1 = 12.8148 us, Median = 13.1862 us, Q3 = 13.2580 us, Max = 13.2580 us
+IQR = 0.4432 us, LowerFence = 12.1500 us, UpperFence = 13.9229 us
+ConfidenceInterval = [8.7466 us; 17.4261 us] (CI 99.9%), Margin = 4.3398 us (33.16% of Mean)
+Skewness = -0.35, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[12.670 us ; 13.078 us) | @
+[13.078 us ; 13.402 us) | @@
+---------------------------------------------------
+
+Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 55.7786 us, StdErr = 0.7758 us (1.39%); N = 3, StdDev = 1.3437 us
+Min = 54.4122 us, Q1 = 54.4122 us, Median = 55.8253 us, Q3 = 57.0984 us, Max = 57.0984 us
+IQR = 2.6862 us, LowerFence = 50.3830 us, UpperFence = 61.1276 us
+ConfidenceInterval = [31.2647 us; 80.2926 us] (CI 99.9%), Margin = 24.5140 us (43.95% of Mean)
+Skewness = -0.03, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[53.597 us ; 55.227 us) | @
+[55.227 us ; 57.277 us) | @@
+---------------------------------------------------
+
+Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 45.6829 us, StdErr = 0.3700 us (0.81%); N = 3, StdDev = 0.6409 us
+Min = 45.0905 us, Q1 = 45.0905 us, Median = 45.5951 us, Q3 = 46.3632 us, Max = 46.3632 us
+IQR = 1.2727 us, LowerFence = 43.1815 us, UpperFence = 48.2722 us
+ConfidenceInterval = [33.9911 us; 57.3747 us] (CI 99.9%), Margin = 11.6918 us (25.59% of Mean)
+Skewness = 0.13, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[44.889 us ; 46.752 us) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.0, OS=ubuntu 18.04
+Intel Core i5-8265U CPU 1.60GHz (Whiskey Lake), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=3.0.100
+  [Host]   : .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+  ShortRun : .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+
+Job=ShortRun  IterationCount=3  LaunchCount=1  
+WarmupCount=3  
+
+|             Method |     Mean |     Error |   StdDev | Ratio | RatioSD |  Gen 0 | Gen 1 | Gen 2 | Allocated | Completed Work Items | Lock Contentions |
+|------------------- |---------:|----------:|---------:|------:|--------:|-------:|------:|------:|----------:|---------------------:|-----------------:|
+|       ReadAllLines | 13.09 us |  4.340 us | 0.238 us |  1.00 |    0.00 | 4.7302 |     - |     - |  14.51 KB |               0.0000 |                - |
+|  ReadAllLinesAsync | 55.78 us | 24.514 us | 1.344 us |  4.26 |    0.04 | 7.0801 |     - |     - |  20.19 KB |               3.0007 |           0.0004 |
+| ReadAllLinesAsync2 | 45.68 us | 11.692 us | 0.641 us |  3.49 |    0.03 | 7.2632 |     - |     - |  20.35 KB |               3.0003 |           0.0007 |
+
+// * Legends *
+  Mean                 : Arithmetic mean of all measurements
+  Error                : Half of 99.9% confidence interval
+  StdDev               : Standard deviation of all measurements
+  Ratio                : Mean of the ratio distribution ([Current]/[Baseline])
+  RatioSD              : Standard deviation of the ratio distribution ([Current]/[Baseline])
+  Gen 0                : GC Generation 0 collects per 1000 operations
+  Gen 1                : GC Generation 1 collects per 1000 operations
+  Gen 2                : GC Generation 2 collects per 1000 operations
+  Allocated            : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Completed Work Items : The number of work items that have been processed in ThreadPool (per single operation)
+  Lock Contentions     : The number of times there was contention upon trying to take a Monitor's lock (per single operation)
+  1 us                 : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - ThreadingDiagnoser *
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:24 (24.01 sec), executed benchmarks: 3
+
+Global total time: 00:00:27 (27.21 sec), executed benchmarks: 3
+// * Artifacts cleanup *

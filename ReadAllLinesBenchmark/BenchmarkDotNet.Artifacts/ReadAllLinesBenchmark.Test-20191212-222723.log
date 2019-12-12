@@ -1,0 +1,214 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 3 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/d8e73067-ba34-43b0-a0ff-3b77b7a7de24
+// command took 0.94s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/d8e73067-ba34-43b0-a0ff-3b77b7a7de24
+// command took 5.06s and exited with 0
+// ***** Done, took 00:00:06 (6.09 sec)   *****
+// Found 3 benchmarks:
+//   Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+// **************************
+// Benchmark: Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d8e73067-ba34-43b0-a0ff-3b77b7a7de24.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLines" --job "ShortRun" --benchmarkId 0 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/d8e73067-ba34-43b0-a0ff-3b77b7a7de24/bin/Release/netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 289976.00 ns, 289.9760 us/op
+WorkloadJitting  1: 1 op, 604792995.00 ns, 604.7930 ms/op
+
+WorkloadWarmup   1: 1 op, 719692565.00 ns, 719.6926 ms/op
+WorkloadWarmup   2: 1 op, 670479019.00 ns, 670.4790 ms/op
+WorkloadWarmup   3: 1 op, 670430700.00 ns, 670.4307 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 663555082.00 ns, 663.5551 ms/op
+WorkloadActual   2: 1 op, 663607502.00 ns, 663.6075 ms/op
+WorkloadActual   3: 1 op, 663622389.00 ns, 663.6224 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 663555082.00 ns, 663.5551 ms/op
+WorkloadResult   2: 1 op, 663607502.00 ns, 663.6075 ms/op
+WorkloadResult   3: 1 op, 663622389.00 ns, 663.6224 ms/op
+GC:  139 40 7 831819488 1
+Threading:  3 0 1
+
+// AfterAll
+// Benchmark Process 7894 has exited with code 0
+
+Mean = 663.5950 ms, StdErr = 0.0204 ms (0.00%); N = 3, StdDev = 0.0354 ms
+Min = 663.5551 ms, Q1 = 663.5551 ms, Median = 663.6075 ms, Q3 = 663.6224 ms, Max = 663.6224 ms
+IQR = 0.0673 ms, LowerFence = 663.4541 ms, UpperFence = 663.7233 ms
+ConfidenceInterval = [662.9500 ms; 664.2400 ms] (CI 99.9%), Margin = 0.6450 ms (0.10% of Mean)
+Skewness = -0.31, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d8e73067-ba34-43b0-a0ff-3b77b7a7de24.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLinesAsync" --job "ShortRun" --benchmarkId 1 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/d8e73067-ba34-43b0-a0ff-3b77b7a7de24/bin/Release/netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 271289.00 ns, 271.2890 us/op
+WorkloadJitting  1: 1 op, 934263159.00 ns, 934.2632 ms/op
+
+WorkloadWarmup   1: 1 op, 957622190.00 ns, 957.6222 ms/op
+WorkloadWarmup   2: 1 op, 902736327.00 ns, 902.7363 ms/op
+WorkloadWarmup   3: 1 op, 919506989.00 ns, 919.5070 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 922907786.00 ns, 922.9078 ms/op
+WorkloadActual   2: 1 op, 925247168.00 ns, 925.2472 ms/op
+WorkloadActual   3: 1 op, 922550332.00 ns, 922.5503 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 922907786.00 ns, 922.9078 ms/op
+WorkloadResult   2: 1 op, 925247168.00 ns, 925.2472 ms/op
+WorkloadResult   3: 1 op, 922550332.00 ns, 922.5503 ms/op
+GC:  144 41 7 845839000 1
+Threading:  46325 0 1
+
+// AfterAll
+// Benchmark Process 7916 has exited with code 0
+
+Mean = 923.5684 ms, StdErr = 0.8457 ms (0.09%); N = 3, StdDev = 1.4648 ms
+Min = 922.5503 ms, Q1 = 922.5503 ms, Median = 922.9078 ms, Q3 = 925.2472 ms, Max = 925.2472 ms
+IQR = 2.6968 ms, LowerFence = 918.5051 ms, UpperFence = 929.2924 ms
+ConfidenceInterval = [896.8455 ms; 950.2914 ms] (CI 99.9%), Margin = 26.7230 ms (2.89% of Mean)
+Skewness = 0.36, Kurtosis = 0.67, MValue = 2
+
+// **************************
+// Benchmark: Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "d8e73067-ba34-43b0-a0ff-3b77b7a7de24.dll" --benchmarkName "ReadAllLinesBenchmark.Test.ReadAllLinesAsync2" --job "ShortRun" --benchmarkId 2 in /home/wipiano/ReadAllLinesBenchmark/ReadAllLinesBenchmark/bin/Release/netcoreapp3.0/d8e73067-ba34-43b0-a0ff-3b77b7a7de24/bin/Release/netcoreapp3.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 329690.00 ns, 329.6900 us/op
+WorkloadJitting  1: 1 op, 1025180418.00 ns, 1.0252 s/op
+
+WorkloadWarmup   1: 1 op, 1020265931.00 ns, 1.0203 s/op
+WorkloadWarmup   2: 1 op, 936057513.00 ns, 936.0575 ms/op
+WorkloadWarmup   3: 1 op, 926327892.00 ns, 926.3279 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 946694110.00 ns, 946.6941 ms/op
+WorkloadActual   2: 1 op, 929611494.00 ns, 929.6115 ms/op
+WorkloadActual   3: 1 op, 936716574.00 ns, 936.7166 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 946694110.00 ns, 946.6941 ms/op
+WorkloadResult   2: 1 op, 929611494.00 ns, 929.6115 ms/op
+WorkloadResult   3: 1 op, 936716574.00 ns, 936.7166 ms/op
+GC:  73 27 4 1151797840 1
+Threading:  46253 0 1
+
+// AfterAll
+// Benchmark Process 7939 has exited with code 0
+
+Mean = 937.6741 ms, StdErr = 4.9545 ms (0.53%); N = 3, StdDev = 8.5815 ms
+Min = 929.6115 ms, Q1 = 929.6115 ms, Median = 936.7166 ms, Q3 = 946.6941 ms, Max = 946.6941 ms
+IQR = 17.0826 ms, LowerFence = 903.9876 ms, UpperFence = 972.3180 ms
+ConfidenceInterval = [781.1162 ms; 1,094.2319 ms] (CI 99.9%), Margin = 156.5579 ms (16.70% of Mean)
+Skewness = 0.11, Kurtosis = 0.67, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/ReadAllLinesBenchmark.Test-report-github.md
+
+// * Detailed results *
+Test.ReadAllLines: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 663.5950 ms, StdErr = 0.0204 ms (0.00%); N = 3, StdDev = 0.0354 ms
+Min = 663.5551 ms, Q1 = 663.5551 ms, Median = 663.6075 ms, Q3 = 663.6224 ms, Max = 663.6224 ms
+IQR = 0.0673 ms, LowerFence = 663.4541 ms, UpperFence = 663.7233 ms
+ConfidenceInterval = [662.9500 ms; 664.2400 ms] (CI 99.9%), Margin = 0.6450 ms (0.10% of Mean)
+Skewness = -0.31, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[663.534 ms ; 663.644 ms) | @@@
+---------------------------------------------------
+
+Test.ReadAllLinesAsync: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 923.5684 ms, StdErr = 0.8457 ms (0.09%); N = 3, StdDev = 1.4648 ms
+Min = 922.5503 ms, Q1 = 922.5503 ms, Median = 922.9078 ms, Q3 = 925.2472 ms, Max = 925.2472 ms
+IQR = 2.6968 ms, LowerFence = 918.5051 ms, UpperFence = 929.2924 ms
+ConfidenceInterval = [896.8455 ms; 950.2914 ms] (CI 99.9%), Margin = 26.7230 ms (2.89% of Mean)
+Skewness = 0.36, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[921.662 ms ; 926.136 ms) | @@@
+---------------------------------------------------
+
+Test.ReadAllLinesAsync2: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 937.6741 ms, StdErr = 4.9545 ms (0.53%); N = 3, StdDev = 8.5815 ms
+Min = 929.6115 ms, Q1 = 929.6115 ms, Median = 936.7166 ms, Q3 = 946.6941 ms, Max = 946.6941 ms
+IQR = 17.0826 ms, LowerFence = 903.9876 ms, UpperFence = 972.3180 ms
+ConfidenceInterval = [781.1162 ms; 1,094.2319 ms] (CI 99.9%), Margin = 156.5579 ms (16.70% of Mean)
+Skewness = 0.11, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[924.405 ms ; 951.900 ms) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.0, OS=ubuntu 18.04
+Intel Core i5-8265U CPU 1.60GHz (Whiskey Lake), 1 CPU, 8 logical and 4 physical cores
+.NET Core SDK=3.0.100
+  [Host]   : .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+  ShortRun : .NET Core 3.0.0 (CoreCLR 4.700.19.46205, CoreFX 4.700.19.46214), X64 RyuJIT
+
+Job=ShortRun  IterationCount=3  LaunchCount=1  
+WarmupCount=3  
+
+|             Method |     Mean |     Error |  StdDev | Ratio | Completed Work Items | Lock Contentions |       Gen 0 |      Gen 1 |     Gen 2 |  Allocated |
+|------------------- |---------:|----------:|--------:|------:|---------------------:|-----------------:|------------:|-----------:|----------:|-----------:|
+|       ReadAllLines | 663.6 ms |   0.65 ms | 0.04 ms |  1.00 |               3.0000 |                - | 139000.0000 | 40000.0000 | 7000.0000 |  793.28 MB |
+|  ReadAllLinesAsync | 923.6 ms |  26.72 ms | 1.46 ms |  1.39 |           46325.0000 |                - | 144000.0000 | 41000.0000 | 7000.0000 |  806.65 MB |
+| ReadAllLinesAsync2 | 937.7 ms | 156.56 ms | 8.58 ms |  1.41 |           46253.0000 |                - |  73000.0000 | 27000.0000 | 4000.0000 | 1098.44 MB |
+
+// * Legends *
+  Mean                 : Arithmetic mean of all measurements
+  Error                : Half of 99.9% confidence interval
+  StdDev               : Standard deviation of all measurements
+  Ratio                : Mean of the ratio distribution ([Current]/[Baseline])
+  Completed Work Items : The number of work items that have been processed in ThreadPool (per single operation)
+  Lock Contentions     : The number of times there was contention upon trying to take a Monitor's lock (per single operation)
+  Gen 0                : GC Generation 0 collects per 1000 operations
+  Gen 1                : GC Generation 1 collects per 1000 operations
+  Gen 2                : GC Generation 2 collects per 1000 operations
+  Allocated            : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 ms                 : 1 Millisecond (0.001 sec)
+
+// * Diagnostic Output - ThreadingDiagnoser *
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:23 (23.17 sec), executed benchmarks: 3
+
+Global total time: 00:00:29 (29.26 sec), executed benchmarks: 3
+// * Artifacts cleanup *
